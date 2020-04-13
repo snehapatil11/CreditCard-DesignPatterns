@@ -1,0 +1,3 @@
+java -cp .;json-simple-1.1.jar creditpackage.CreditCardRecordReader Sample.json
+
+java creditpackage.CreditCardRecordReader Sample.json
