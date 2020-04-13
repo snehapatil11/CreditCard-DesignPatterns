@@ -47,7 +47,7 @@ public class JSONFileParser extends FileParser{
     }
 
     @Override
-    public void writeFile() {
+    public void writeFile(String filename, List<List<String>> creditCardRecords) {
 
     }
 }

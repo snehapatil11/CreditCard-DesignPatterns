@@ -6,7 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11433ed1-ce19-4e63-9ec4-971fdcddd440" name="Default Changelist" comment="" />
+    <list default="true" id="11433ed1-ce19-4e63-9ec4-971fdcddd440" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sample.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Sample.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CreditCardProject/Sample.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CreditCardProject/Sample.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/CreditCardRecordReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/CreditCardRecordReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creditpackage/CSVFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creditpackage/CSVFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creditpackage/CreditCardRecordReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creditpackage/CreditCardRecordReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creditpackage/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creditpackage/FileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creditpackage/JSONFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creditpackage/JSONFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creditpackage/XMLFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creditpackage/XMLFileParser.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +46,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -92,11 +102,26 @@
       <updated>1586650750423</updated>
       <workItem from="1586650754510" duration="18363000" />
       <workItem from="1586718934065" duration="19716000" />
+      <workItem from="1586748646847" duration="1420000" />
+      <workItem from="1586820015807" duration="1730000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -123,7 +148,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/creditpackage/CreditCardRecordReader.java</url>
-          <line>30</line>
+          <line>36</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>

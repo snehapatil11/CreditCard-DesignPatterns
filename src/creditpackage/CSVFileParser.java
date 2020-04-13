@@ -2,6 +2,7 @@ package creditpackage;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -40,7 +41,22 @@ public class CSVFileParser extends FileParser{
     }
 
     @Override
-    public void writeFile() {
-        System.out.println("CSV Write");
+    public void writeFile(String filename, List<List<String>> creditCardRecords) throws IOException {
+
+        FileWriter csvWriter = new FileWriter(filename);
+        csvWriter.append("Name");
+        csvWriter.append(",");
+        csvWriter.append("Role");
+        csvWriter.append(",");
+        csvWriter.append("Topic");
+        csvWriter.append("\n");
+
+        for (List<String> rowData : creditCardRecords) {
+            csvWriter.append(String.join(",", rowData));
+            csvWriter.append("\n");
+        }
+
+        csvWriter.flush();
+        csvWriter.close();
     }
 }

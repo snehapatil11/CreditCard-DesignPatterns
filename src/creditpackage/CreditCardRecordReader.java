@@ -1,5 +1,6 @@
 package creditpackage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,11 @@ public class CreditCardRecordReader {
         System.out.println(filename);
         return fileParser.parseFile(filename);
     }
+
+    public void writeFile(String filename, List<List<String>> creditCardRecords ) throws IOException {
+        fileParser.writeFile(filename,creditCardRecords);
+    }
+
     public  List<List<String>> verifyCreateCreditCardRecord(List<List<String>> creditCardRecords){
         List<List<String>> recordswithTypeError = new ArrayList<List<String>>();
         String type,error = null;
@@ -70,7 +76,7 @@ public class CreditCardRecordReader {
         }
 
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         CreditCardRecordReader recordReader = null;
         String extension = args[0].substring(args[0].lastIndexOf(".") +1);
@@ -86,8 +92,11 @@ public class CreditCardRecordReader {
             List<List<String>> creditCardRecords = recordReader.parsefile(args[0]);
             creditCardRecords = recordReader.verifyCreateCreditCardRecord(creditCardRecords);
             //System.out.println(creditCardRecords);
+            //All valid credit card objects are created.
             recordReader.createCreditCards(creditCardRecords);
             System.out.println(recordReader.creditCards);
+
+            recordReader.writeFile(args[1], creditCardRecords);
         }
 
     }
