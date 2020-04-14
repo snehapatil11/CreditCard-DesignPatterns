@@ -2,6 +2,7 @@ package creditpackage;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +49,21 @@ public class JSONFileParser extends FileParser{
 
     @Override
     public void writeFile(String filename, List<List<String>> creditCardRecords) {
+        JSONArray creditCardList = new JSONArray();
+        creditCardRecords.forEach( jsonrecord -> {
+            JSONObject record = new JSONObject();
+            record.put("CardNumber", jsonrecord.get(0));
+            record.put("Type", jsonrecord.get(3));
+            record.put("Error", jsonrecord.get(4));
+            creditCardList.add(record);
+        });
+        try (FileWriter file = new FileWriter(filename)) {
 
+            file.write(creditCardList.toJSONString());
+            file.flush();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -83,10 +83,10 @@ public class CreditCardRecordReader {
 
         if(extension.equals("csv"))
             recordReader = new CreditCardRecordReader(new CSVFileParser());
-        else if(extension.equals("xml"))
-            recordReader = new CreditCardRecordReader(new XMLFileParser());
         else if(extension.equals("json"))
             recordReader = new CreditCardRecordReader(new JSONFileParser());
+        else if(extension.equals("xml"))
+            recordReader = new CreditCardRecordReader(new XMLFileParser());
 
         if(recordReader != null) {
             List<List<String>> creditCardRecords = recordReader.parsefile(args[0]);
