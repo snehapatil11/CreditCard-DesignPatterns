@@ -90,8 +90,9 @@ public class CreditCardRecordReader {
 
         if(recordReader != null) {
             List<List<String>> creditCardRecords = recordReader.parsefile(args[0]);
+            System.out.println(creditCardRecords);
             creditCardRecords = recordReader.verifyCreateCreditCardRecord(creditCardRecords);
-            //System.out.println(creditCardRecords);
+
             //All valid credit card objects are created.
             recordReader.createCreditCards(creditCardRecords);
             System.out.println(recordReader.creditCards);

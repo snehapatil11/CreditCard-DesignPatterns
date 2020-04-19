@@ -7,12 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11433ed1-ce19-4e63-9ec4-971fdcddd440" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/CreditCardProject_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SampleOutput.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SampleOutput.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SampleOutput.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/CSVFileParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/CSVFileParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/CreditCardRecordReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/CreditCardRecordReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/JSONFileParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/JSONFileParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CreditCardProject/new.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/FileParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/FileParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/XMLFileParser$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/XMLFileParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CreditCardProject/creditpackage/XMLFileParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creditpackage/CSVFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creditpackage/CSVFileParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/creditpackage/CreditCardRecordReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creditpackage/CreditCardRecordReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creditpackage/JSONFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creditpackage/JSONFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creditpackage/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creditpackage/FileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creditpackage/XMLFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creditpackage/XMLFileParser.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,16 +40,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1aPwtKB1FllMtNMDkaJVWGIMpqS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -61,7 +75,7 @@
     <configuration name="CreditCardRecordReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="creditpackage.CreditCardRecordReader" />
       <module name="CreditCardProject" />
-      <option name="PROGRAM_PARAMETERS" value="Sample.csv" />
+      <option name="PROGRAM_PARAMETERS" value="Sample.json output.json" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="creditpackage.*" />
@@ -101,7 +115,10 @@
       <workItem from="1586718934065" duration="19716000" />
       <workItem from="1586748646847" duration="1420000" />
       <workItem from="1586820015807" duration="2019000" />
-      <workItem from="1586862973351" duration="3655000" />
+      <workItem from="1586862973351" duration="3767000" />
+      <workItem from="1587154720493" duration="11008000" />
+      <workItem from="1587251275113" duration="541000" />
+      <workItem from="1587337071079" duration="185000" />
     </task>
     <servers />
   </component>
@@ -120,6 +137,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

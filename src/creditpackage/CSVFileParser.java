@@ -44,15 +44,20 @@ public class CSVFileParser extends FileParser{
     public void writeFile(String filename, List<List<String>> creditCardRecords) throws IOException {
 
         FileWriter csvWriter = new FileWriter(filename);
-        csvWriter.append("Name");
+        csvWriter.append("CardNumber");
         csvWriter.append(",");
-        csvWriter.append("Role");
+        csvWriter.append("CardType");
         csvWriter.append(",");
-        csvWriter.append("Topic");
+        csvWriter.append("Error");
         csvWriter.append("\n");
 
         for (List<String> rowData : creditCardRecords) {
-            csvWriter.append(String.join(",", rowData));
+            List<String> csvrow = new ArrayList<>();
+            csvrow.add(rowData.get(0));
+            csvrow.add(rowData.get(3));
+            csvrow.add(rowData.get(4));
+
+            csvWriter.append(String.join(",", csvrow));
             csvWriter.append("\n");
         }
 
