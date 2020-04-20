@@ -4,7 +4,7 @@ public class VisaVerificationHandler implements CCVerificationHandler {
     private CCVerificationHandler successor = null;
     @Override
     public String verifyCreditCard(String creditCardNumber) {
-        String type = null;
+        String type = "Invalid";
         if((creditCardNumber.length() == 13 || creditCardNumber.length() == 16 )&& creditCardNumber.charAt(0) == '4')
         {
             type= "Visa";

@@ -5,7 +5,7 @@ public class DiscoverVerificationHandler implements CCVerificationHandler {
     @Override
     public String verifyCreditCard(String creditCardNumber) {
         String type = null;
-        if(creditCardNumber.length() == 16 && creditCardNumber.substring(0,4) == "6011")
+        if(creditCardNumber.length() == 16 && creditCardNumber.startsWith("6011"))
         {
             type = "Discover";
         }
