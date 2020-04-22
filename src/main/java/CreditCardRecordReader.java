@@ -52,30 +52,17 @@ public class CreditCardRecordReader {
         return recordswithTypeError;
     }
     public void createCreditCards(List<List<String>> records){
+        CreditCardFactory factory = new CreditCardFactory();
         CreditCard card;
         for (int i = 0; i < records.size(); i++) {
             List<String> record = records.get(i);
             if(record.get(3) != "Invalid"){
-                if(record.get(3) == "Visa"){
-                    card = new VisaCC(Long.parseLong(record.get(0)), record.get(1),record.get(2), record.get(3));
+                    card = factory.getCreditCard(record);
                     creditCards.add(card);
-                }
-                if(record.get(3) == "MasterCard"){
-                    card = new MasterCardCC(Long.parseLong(record.get(0)), record.get(1),record.get(2), record.get(3));
-                    creditCards.add(card);
-                }
-                if(record.get(3) == "Discover"){
-                    card = new DiscoverCC(Long.parseLong(record.get(0)), record.get(1),record.get(2), record.get(3));
-                    creditCards.add(card);
-                }
-                if(record.get(3) == "AmericanExpress"){
-                    card = new AmericanExpressCC(Long.parseLong(record.get(0)), record.get(1),record.get(2), record.get(3));
-                    creditCards.add(card);
-                }
             }
         }
-
     }
+
     public static void main(String[] args) throws IOException {
 
         CreditCardRecordReader recordReader = null;
@@ -85,16 +72,19 @@ public class CreditCardRecordReader {
         }
 
         String extension = args[0].substring(args[0].lastIndexOf(".") + 1);
-        if (extension.equals("csv"))
+        String outputExtension = args[1].substring(args[1].lastIndexOf(".") + 1);
+
+        if (extension.equals("csv") && outputExtension.equals("csv"))
             recordReader = new CreditCardRecordReader(new CSVFileParser());
-        else if (extension.equals("json"))
+        else if (extension.equals("json") && outputExtension.equals("json"))
             recordReader = new CreditCardRecordReader(new JSONFileParser());
-        else if (extension.equals("xml"))
+        else if (extension.equals("xml") && outputExtension.equals("xml"))
             recordReader = new CreditCardRecordReader(new XMLFileParser());
         else{
-            System.err.println("Please provide either csv, json or xml input file");
+            System.err.println("Please provide either csv, json or xml input & output files");
             return;
         }
+
         if(recordReader != null) {
             List<List<String>> creditCardRecords = recordReader.parsefile(args[0]);
             System.out.println(creditCardRecords);

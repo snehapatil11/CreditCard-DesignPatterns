@@ -45,7 +45,8 @@ public class XMLFileParser extends FileParser{
                     ArrayList<String> xmlRecord = new ArrayList<String>();
 
                     Double val = Double.parseDouble(eElement.getElementsByTagName("CardNumber").item(0).getTextContent());
-                    xmlRecord.add(String.valueOf(new BigDecimal(val).toBigInteger()));
+                    //xmlRecord.add(String.valueOf(new BigDecimal(val).toBigInteger()));
+                    xmlRecord.add(eElement.getElementsByTagName("CardNumber").item(0).getTextContent());
                     xmlRecord.add(eElement.getElementsByTagName("ExpirationDate").item(0).getTextContent());
                     xmlRecord.add(eElement.getElementsByTagName("NameOfCardholder").item(0).getTextContent());
 
