@@ -1,6 +1,6 @@
 
 public class AmericanExpressCC extends CreditCard {
-    public AmericanExpressCC(Long number, String date, String holderName, String type) {
+    public AmericanExpressCC(String number, String date, String holderName, String type) {
         super(number, date, holderName, type);
     }
 }

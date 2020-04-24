@@ -44,7 +44,7 @@ public class XMLFileParser extends FileParser{
                     Element eElement = (Element) nNode;
                     ArrayList<String> xmlRecord = new ArrayList<String>();
 
-                    Double val = Double.parseDouble(eElement.getElementsByTagName("CardNumber").item(0).getTextContent());
+                    //Double val = Double.parseDouble(eElement.getElementsByTagName("CardNumber").item(0).getTextContent());
                     //xmlRecord.add(String.valueOf(new BigDecimal(val).toBigInteger()));
                     xmlRecord.add(eElement.getElementsByTagName("CardNumber").item(0).getTextContent());
                     xmlRecord.add(eElement.getElementsByTagName("ExpirationDate").item(0).getTextContent());
@@ -55,7 +55,8 @@ public class XMLFileParser extends FileParser{
             }
         }
         catch (Exception e) {
-        e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println(e.toString());
         }
         return xmlRecords;
     }

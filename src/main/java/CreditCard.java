@@ -1,15 +1,15 @@
 
 
 public abstract class CreditCard {
-    private Long creditCardNumber;
+    private String creditCardNumber;
     private String expirationDate;
     private String cardHolderName;
     private String cardType;
 
-    public CreditCard(Long number, String date, String holderName, String type){
-        creditCardNumber = number;
-        expirationDate = date;
-        cardHolderName = holderName;
-        cardType = type;
+    public CreditCard(String number, String date, String holderName, String type){
+        this.creditCardNumber = number;
+        this.expirationDate = date;
+        this.cardHolderName = holderName;
+        this.cardType = type;
     }
 }

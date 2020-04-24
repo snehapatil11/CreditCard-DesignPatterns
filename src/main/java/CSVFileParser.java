@@ -26,7 +26,8 @@ public class CSVFileParser extends FileParser{
                 if(i != 0) {
                     //System.out.println(Double.parseDouble(record[0]));
                     //csvRecord.add(String.valueOf(new BigDecimal(record[0]).toBigInteger()));
-                    csvRecord.add(record[0]);
+                    String number = String.valueOf(record[0]);
+                    csvRecord.add(number);
                     csvRecord.add(record[1]);
                     csvRecord.add(record[2]);
 
@@ -36,7 +37,8 @@ public class CSVFileParser extends FileParser{
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println(e.toString());
         }
         return csvRecords;
     }

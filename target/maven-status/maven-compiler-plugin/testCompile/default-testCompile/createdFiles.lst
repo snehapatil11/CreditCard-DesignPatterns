@@ -1,6 +1,6 @@
 VisaVerificationHandlerTest.class
-CreditCardRecordReaderTest.class
 AmExVerificationHandlerTest.class
-TestRunner2.class
 DiscoverVerificationHandlerTest.class
 MasterCardVerificationHandlerTest.class
+CreditCardRecordReaderTest.class
+TestRunner.class

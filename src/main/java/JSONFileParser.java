@@ -28,8 +28,8 @@ public class JSONFileParser extends FileParser{
                 //System.out.println(record);
                 ArrayList<String> jsonRecord = new ArrayList<String>();
                 JSONObject recordObject = (JSONObject) record;
-                Long cardnumber = (Long) recordObject.get("CardNumber");
-                jsonRecord.add(String.valueOf(cardnumber));
+                String cardnumber = String.valueOf(recordObject.get("CardNumber"));
+                jsonRecord.add(cardnumber);
                 String expiry = (String) recordObject.get("ExpirationDate");
                 jsonRecord.add(expiry);
                 String cardholder = (String) recordObject.get("NameOfCardholder");
@@ -38,11 +38,14 @@ public class JSONFileParser extends FileParser{
             } );
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println(e.toString());
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println(e.toString());
         } catch (ParseException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println(e.toString());
         }
         return jsonRecords;
     }
