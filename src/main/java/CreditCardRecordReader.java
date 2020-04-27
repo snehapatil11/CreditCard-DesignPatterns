@@ -24,6 +24,7 @@ public class CreditCardRecordReader {
     public  List<List<String>> verifyCreateCreditCardRecord(List<List<String>> creditCardRecords){
         List<List<String>> recordswithTypeError = new ArrayList<List<String>>();
         String type,error = null;
+        boolean numeric = true;
         CCVerificationHandler h1 = new MasterCardVerificationHandler();
         CCVerificationHandler h2 = new VisaVerificationHandler();
         CCVerificationHandler h3 = new DiscoverVerificationHandler();
@@ -32,9 +33,16 @@ public class CreditCardRecordReader {
         h2.setSuccessor(h3);
         h3.setSuccessor(h4);
         for (int i = 0; i < creditCardRecords.size(); i++) {
+            numeric = true;
             List<String> record = creditCardRecords.get(i);
             //String type = h1.verifyCreditCard(Long.parseLong(record.get(0)));
-            if(record.get(0).length() > 19){
+            try {
+                Double num = Double.parseDouble(record.get(0));
+            } catch (NumberFormatException e) {
+                numeric = false;
+            }
+
+            if(record.get(0).length() > 19 || !numeric){
                 type = "Invalid";
                 error = "InvalidCardNumber";
             }

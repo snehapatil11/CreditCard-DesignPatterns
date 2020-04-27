@@ -1,0 +1,7 @@
+[{"CardNumber":"5410000000000000","Type":"MasterCard","Error":"None"},
+  {"CardNumber":"4120000000000","Type":"Visa","Error":"None"},
+  {"CardNumber":"5210000000000000","Type":"MasterCard","Error":"None"},
+  {"CardNumber":"6011000000000000","Type":"Discover","Error":"None"},
+  {"CardNumber":"341000000000000","Type":"AmericanExpress","Error":"None"},
+  {"CardNumber":"412abccdfefhj","Type":"Invalid","Error":"InvalidCardNumber"},
+  {"CardNumber":"6010000000000000","Type":"Invalid","Error":"InvalidCardNumber"}]
