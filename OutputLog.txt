@@ -1,18 +1,10 @@
 =================================================================
-MVN Compile & MVN Install
+MVN Compile
 =================================================================
 
 
-E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn install
+E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn compile
 [INFO] Scanning for projects...
-[WARNING]
-[WARNING] Some problems were encountered while building the effective model for 202IndividualProject:CreditCardProject:jar:1.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 12, column 21
-[WARNING]
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING]
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING]
 [INFO]
 [INFO] ---------------< 202IndividualProject:CreditCardProject >---------------
 [INFO] Building CreditCardProject 1.0-SNAPSHOT
@@ -23,21 +15,42 @@ E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn install
 [INFO] Copying 0 resource
 [INFO]
 [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ CreditCardProject ---
-[INFO] Changes detected - recompiling the module!
-[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
-[INFO] Compiling 15 source files to E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11\target\classes
-[WARNING] /E:/Sneha_MSSE/CMPE202/individual-project-snehapatil11/src/main/java/JSONFileParser.java: E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11\src\main\java\JSONFileParser.jav
-a uses unchecked or unsafe operations.
-[WARNING] /E:/Sneha_MSSE/CMPE202/individual-project-snehapatil11/src/main/java/JSONFileParser.java: Recompile with -Xlint:unchecked for details.
+[INFO] Nothing to compile - all classes are up to date
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.676 s
+[INFO] Finished at: 2020-04-27T14:48:34-07:00
+[INFO] ------------------------------------------------------------------------
+
+
+
+=================================================================
+MVN Install
+=================================================================
+
+
+
+E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn install
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------< 202IndividualProject:CreditCardProject >---------------
+[INFO] Building CreditCardProject 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ CreditCardProject ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ CreditCardProject ---
+[INFO] Nothing to compile - all classes are up to date
 [INFO]
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ CreditCardProject ---
 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 [INFO] skip non existing resourceDirectory E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11\src\test\resources
 [INFO]
 [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ CreditCardProject ---
-[INFO] Changes detected - recompiling the module!
-[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
-[INFO] Compiling 6 source files to E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11\target\test-classes
+[INFO] Nothing to compile - all classes are up to date
 [INFO]
 [INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ CreditCardProject ---
 [INFO] Surefire report directory: E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11\target\surefire-reports
@@ -46,19 +59,19 @@ a uses unchecked or unsafe operations.
  T E S T S
 -------------------------------------------------------
 Running AmExVerificationHandlerTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.125 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 sec
 Running CreditCardRecordReaderTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
 Running DiscoverVerificationHandlerTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
 Running MasterCardVerificationHandlerTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
-Running VisaVerificationHandlerTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running VisaVerificationHandlerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
 
 Results :
 
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO]
 [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ CreditCardProject ---
@@ -71,11 +84,9 @@ t\1.0-SNAPSHOT\CreditCardProject-1.0-SNAPSHOT.jar
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  12.624 s
-[INFO] Finished at: 2020-04-19T18:04:00-07:00
+[INFO] Total time:  3.666 s
+[INFO] Finished at: 2020-04-27T14:48:52-07:00
 [INFO] ------------------------------------------------------------------------
-
-
 
 
 
@@ -84,16 +95,9 @@ t\1.0-SNAPSHOT\CreditCardProject-1.0-SNAPSHOT.jar
 JSON File Parsing
 ====================================================================================
 
+
 E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn exec:java -Dexec.mainClass=CreditCardRecordReader -Dexec.args="Sample.json test.json"
 [INFO] Scanning for projects...
-[WARNING]
-[WARNING] Some problems were encountered while building the effective model for 202IndividualProject:CreditCardProject:jar:1.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 12, column 21
-[WARNING]
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING]
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING]
 [INFO]
 [INFO] ---------------< 202IndividualProject:CreditCardProject >---------------
 [INFO] Building CreditCardProject 1.0-SNAPSHOT
@@ -101,16 +105,12 @@ E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn exec:java -Dexec.mainC
 [INFO]
 [INFO] --- exec-maven-plugin:1.6.0:java (default-cli) @ CreditCardProject ---
 Sample.json
-[[5410000000000000, 3/20/2030, Alice], [4120000000000, 4/20/2030, Bob], [341000000000000, 5/20/2030, Eve], [6010000000000000, 6/20/2030, Richard]]
-[MasterCardCC@1f30270f, VisaCC@1b4977d9, AmericanExpressCC@6e9cc1a8]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.414 s
-[INFO] Finished at: 2020-04-19T18:04:57-07:00
+[INFO] Total time:  1.800 s
+[INFO] Finished at: 2020-04-27T14:51:49-07:00
 [INFO] ------------------------------------------------------------------------
-
-
 
 
 
@@ -122,14 +122,6 @@ XML File Parsing
 
 E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn exec:java -Dexec.mainClass=CreditCardRecordReader -Dexec.args="Sample.xml test.xml"
 [INFO] Scanning for projects...
-[WARNING]
-[WARNING] Some problems were encountered while building the effective model for 202IndividualProject:CreditCardProject:jar:1.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 12, column 21
-[WARNING]
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING]
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING]
 [INFO]
 [INFO] ---------------< 202IndividualProject:CreditCardProject >---------------
 [INFO] Building CreditCardProject 1.0-SNAPSHOT
@@ -137,15 +129,12 @@ E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn exec:java -Dexec.mainC
 [INFO]
 [INFO] --- exec-maven-plugin:1.6.0:java (default-cli) @ CreditCardProject ---
 Sample.xml
-[[5410000000000000, 3/20/2030, Alice], [4120000000000, 4/20/2030, Bob], [341000000000000, 5/20/2030, Eve], [6010000000000000, 6/20/2030, Richard]]
-[MasterCardCC@473df101, VisaCC@516fb881, AmericanExpressCC@c24d352]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.182 s
-[INFO] Finished at: 2020-04-19T18:05:48-07:00
+[INFO] Total time:  1.801 s
+[INFO] Finished at: 2020-04-27T14:52:39-07:00
 [INFO] ------------------------------------------------------------------------
-
 
 
 
@@ -156,16 +145,9 @@ CSV File Parsing
 ====================================================================================
 
 
+
 E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn exec:java -Dexec.mainClass=CreditCardRecordReader -Dexec.args="Sample.csv test.csv"
 [INFO] Scanning for projects...
-[WARNING]
-[WARNING] Some problems were encountered while building the effective model for 202IndividualProject:CreditCardProject:jar:1.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 12, column 21
-[WARNING]
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING]
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING]
 [INFO]
 [INFO] ---------------< 202IndividualProject:CreditCardProject >---------------
 [INFO] Building CreditCardProject 1.0-SNAPSHOT
@@ -173,15 +155,12 @@ E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn exec:java -Dexec.mainC
 [INFO]
 [INFO] --- exec-maven-plugin:1.6.0:java (default-cli) @ CreditCardProject ---
 Sample.csv
-[[5410000000000000, 3/20/2030, Alice], [4120000000000, 4/20/2030, Bob], [341000000000000, 5/20/2030, Eve], [6010000000000000, 6/20/2030, Richard]]
-[MasterCardCC@684550d6, VisaCC@32230144, AmericanExpressCC@59e79adf]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.493 s
-[INFO] Finished at: 2020-04-19T18:06:13-07:00
+[INFO] Total time:  1.510 s
+[INFO] Finished at: 2020-04-27T14:54:21-07:00
 [INFO] ------------------------------------------------------------------------
-
 
 
 
@@ -192,16 +171,8 @@ Not Enough Input parameters
 ====================================================================================
 
 
-E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn exec:java -Dexec.mainClass=CreditCardRecordReader
+E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn exec:java -Dexec.mainClass=CreditCardRecordReader -Dexec.args="Sample.csv"
 [INFO] Scanning for projects...
-[WARNING]
-[WARNING] Some problems were encountered while building the effective model for 202IndividualProject:CreditCardProject:jar:1.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 12, column 21
-[WARNING]
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING]
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING]
 [INFO]
 [INFO] ---------------< 202IndividualProject:CreditCardProject >---------------
 [INFO] Building CreditCardProject 1.0-SNAPSHOT
@@ -212,10 +183,34 @@ Not enough arguments! Please provide input and output filenames
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.267 s
-[INFO] Finished at: 2020-04-19T18:07:15-07:00
+[INFO] Total time:  1.628 s
+[INFO] Finished at: 2020-04-27T14:54:55-07:00
 [INFO] ------------------------------------------------------------------------
 
+
+
+
+====================================================================================
+Invalid input and output Files type
+====================================================================================
+
+
+
+E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn exec:java -Dexec.mainClass=CreditCardRecordReader -Dexec.args="Sample.test test.csv"
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------< 202IndividualProject:CreditCardProject >---------------
+[INFO] Building CreditCardProject 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- exec-maven-plugin:1.6.0:java (default-cli) @ CreditCardProject ---
+Please provide either csv, json or xml input & output files
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.625 s
+[INFO] Finished at: 2020-04-27T14:55:47-07:00
+[INFO] ------------------------------------------------------------------------
 
 
 
@@ -227,16 +222,9 @@ JUNIT Tests
 ====================================================================================
 
 
+
 E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn test
 [INFO] Scanning for projects...
-[WARNING]
-[WARNING] Some problems were encountered while building the effective model for 202IndividualProject:CreditCardProject:jar:1.0-SNAPSHOT
-[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 12, column 21
-[WARNING]
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING]
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING]
 [INFO]
 [INFO] ---------------< 202IndividualProject:CreditCardProject >---------------
 [INFO] Building CreditCardProject 1.0-SNAPSHOT
@@ -247,21 +235,14 @@ E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11>mvn test
 [INFO] Copying 0 resource
 [INFO]
 [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ CreditCardProject ---
-[INFO] Changes detected - recompiling the module!
-[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
-[INFO] Compiling 15 source files to E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11\target\classes
-[WARNING] /E:/Sneha_MSSE/CMPE202/individual-project-snehapatil11/src/main/java/JSONFileParser.java: E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11\src\main\java\JSONFileParser.jav
-a uses unchecked or unsafe operations.
-[WARNING] /E:/Sneha_MSSE/CMPE202/individual-project-snehapatil11/src/main/java/JSONFileParser.java: Recompile with -Xlint:unchecked for details.
+[INFO] Nothing to compile - all classes are up to date
 [INFO]
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ CreditCardProject ---
 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 [INFO] skip non existing resourceDirectory E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11\src\test\resources
 [INFO]
 [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ CreditCardProject ---
-[INFO] Changes detected - recompiling the module!
-[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
-[INFO] Compiling 6 source files to E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11\target\test-classes
+[INFO] Nothing to compile - all classes are up to date
 [INFO]
 [INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ CreditCardProject ---
 [INFO] Surefire report directory: E:\Sneha_MSSE\CMPE202\individual-project-snehapatil11\target\surefire-reports
@@ -270,24 +251,24 @@ a uses unchecked or unsafe operations.
  T E S T S
 -------------------------------------------------------
 Running AmExVerificationHandlerTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.141 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.093 sec
 Running CreditCardRecordReaderTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
 Running DiscoverVerificationHandlerTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
 Running MasterCardVerificationHandlerTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
 Running VisaVerificationHandlerTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
 
 Results :
 
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.721 s
-[INFO] Finished at: 2020-04-19T18:06:43-07:00
+[INFO] Total time:  3.125 s
+[INFO] Finished at: 2020-04-27T14:56:40-07:00
 [INFO] ------------------------------------------------------------------------
 
